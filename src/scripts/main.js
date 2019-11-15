@@ -22,9 +22,7 @@ const getSingleHero = (event) => {
     
     console.log(heroUpper)
     
-    return fetch(`http://localhost:8088/heroes?localized_name=${heroUpper}`).then(r => r.json())
+    return fetch(`http://localhost:8088/heroes?localized_name=${heroUpper}`).then(r => r.json()).then(r => console.log(r))
 }
 
 button.addEventListener("click", getSingleHero)
-
-console.log(getSingleHero("pudge"))
